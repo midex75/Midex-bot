@@ -21,7 +21,7 @@ function getText(message) {
 }
 
 async function startBot() {
-  const { state, saveCreds } = await useMultiFileAuthState("auth_info");
+  const { state, saveCreds } = await useMultiFileAuthState("/data/auth_info");
   const { version } = await fetchLatestBaileysVersion();
 
   const sock = makeWASocket({
